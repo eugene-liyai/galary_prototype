@@ -173,3 +173,31 @@ textarea {
 optgroup {
     font-weight: bold;
 }
+
+/* --------- Typography --------- */
+
+body, button, input, select, textarea {
+    color: #0b0b0b;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    /*font-size: 16px;*/
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5 {
+    text-transform: uppercase;
+    color: #00b8b8;
+}
+
+h4, h5 {
+    color: #a5a5a5;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.75em;
+    line-height: 1.0909090909090908;
+    margin-top: 0.8181818181818181em;
+    margin-bottom: 0.27272727272727em;
+}
