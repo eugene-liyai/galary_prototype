@@ -346,4 +346,70 @@ a:active {
 
 /* --------- Footer Styles --------- */
 
+.footer {
+    padding: 1em 0 3em 0;
+    background-color: #e0e5bd;
+    clear: both;
+}
+
+.footer-navigation {
+    max-width: 58.2%;
+    margin: 0 auto;
+}
+
+.footer-navigation li {
+    list-style-type: none;
+    float: right;
+    margin-right: 1.5em;
+}
+
+.footer-navigation a {
+    color: #00b8b8;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    display: block;
+    padding: 0 1em;
+    transition: .5s all;
+}
+
+.footer-navigation a:hover {
+    color: #01d8d8;
+}
+
+.copyright {
+    max-width: 960px;
+    margin: 4em auto;
+    clear: left;
+    text-align: center;
+}
+
+/* --------- Sidebar --------- */
+
+.sidebar {
+    background: #5da87b;
+    float: right;
+    width: 30%;
+    padding: 1em;
+    color: #fff;
+}
+
+.sidebar .sidebar-heading {
+    color: #fff;
+}
+
+/* --------- Two column template right sidebar --------- */
+
+.two-column-tempate-wrapper {
+    float: left;
+    width: 55%;
+    margin-right: 1em;
+}
+
+/* --------- Front-page/Home-Template --------- */
+
+.home h1, .home h2, .home h3 {
+    color: #fff;
+}
+
 
