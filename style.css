@@ -541,8 +541,148 @@ a:active {
     background: #de3d83;
 }
 
+.featured-instructor-pink h3{
+    color: #00b8b8;
+}
+
+.featured-instructor-teal {
+    background: #00b8b8;
+}
 
 
+.featured-instructor-teal h3 {
+    color: #de3d83;
+}
 
+.featured-instructor-purple {
+    background: #9d4eb6;
+}
 
+.featured-instructor-purple h3 {
+    color: #5da87b;
+}
 
+.featured-instructor .button:hover {
+    background: #5da87b;
+}
+
+/* --------- Classes Template --------- */
+
+.classes {
+
+}
+
+.classes-wrapper {
+    background-image: url(images/classes-template-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+    min-height: 600px;
+}
+
+.class-container h2 {
+    color: #fff;
+}
+
+.classes-entry p {
+    color: #fff;
+    color: #151515;
+    font-weight: 300;
+}
+
+.class-container {
+    background: #fff;
+    width: 40%;
+    min-width: 387px;
+    max-width: 500px;
+    margin: 2em 2em 2em 0;
+    border: 1px solid #dbdbdb;
+    float: left;
+    box-shadow: none;
+    transition: .25s all;
+}
+
+.class-container:hover {
+    box-shadow: 0 0 15px 1px #c1c1c1;
+}
+
+.class-container-content {
+    padding: 0 2em 2em 2em;
+}
+
+.class-container h2 {
+    font-size: 1.375em;
+    font-weight: 300;
+    line-height: 1.0909090909090908em;
+    text-transform: capitalize;
+    padding: .5em;
+    margin-top: 0;
+}
+
+.class-skill-section, .class-length-section, .class-instructor-section {
+    width: 40%;
+    text-align: center;
+    float: left;
+}
+
+.instructor-name, .skill-level, .length {
+    color: #a5a5a5;
+}
+
+.instructor-headshot {
+    display: block;
+    margin: .5em auto;
+}
+
+.class-skill-level, .skill-level {
+    margin: .5em 0;
+}
+
+.class-skill-section, .class-length-section {
+    margin-left: 4em;
+}
+
+.class-description {
+    clear: both;
+}
+
+.enroll-button {
+    display: block;
+    margin: 0 auto;
+}
+
+.class-container .enroll-button:hover {
+    background-color: #00b8b8;
+}
+
+.class-container-pink h2, .class-container-pink .enroll-button {
+    background-color: #de3d83;
+}
+
+.class-container-pink h3 {
+    color: #de3d83;
+}
+
+.class-container-purple h2, .class-container-purple .enroll-button {
+    background-color: #9d4eb6;
+}
+
+.class-container-purple h3 {
+    color: #9d4eb6;
+}
+
+.class-container-teal h2, .class-container-teal .enroll-button {
+    background-color: #027d7d;
+}
+
+.class-container-teal h3 {
+    color: #027d7d;
+}
+
+.class-container-green h2, .class-container-green .enroll-button {
+    background-color: #5da87b;
+}
+
+.class-container-green h3 {
+    color: #5da87b;
+}
