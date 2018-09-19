@@ -17,6 +17,14 @@
 <!-- Portfolio Grid Section -->
 <section class="portfolio" id="portfolio">
   <div class="container">
+      <?php
+        if(have_posts()):
+            while(have_posts()):
+                the_post();
+                the_content();
+            endwhile;
+        endif;
+      ?>
     <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
     <hr class="star-dark mb-5">
     <div class="row">
