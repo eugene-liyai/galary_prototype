@@ -39,6 +39,10 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <?php wp_nav_menu($arg=array(
+                'menu_class' => 'navbar-nav ml-auto',
+                'theme_location' => 'primary'
+            )); ?>
         </div>
     </div>
 </nav>
