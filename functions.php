@@ -34,3 +34,19 @@ function gallery_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'gallery_scripts');
+
+// Register widget areas
+
+function gallery_widget_init() {
+    register_sidebar(array(
+        'name' => __('Main sidebar', 'gallery'),
+        'id' => 'main_sidebar',
+        'description' => __('widgets added here will appear in all pages using two-column template', 'gallery'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after-title'=> '</h2>'
+    ));
+}
+
+add_action('widgets_init', 'gallery_widget_init');
