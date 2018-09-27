@@ -8,9 +8,12 @@
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
-            <div class="row">
-
-            </div>
+<!--            <div class="row">-->
+                <?php wp_nav_menu($arg=array(
+                    'menu_class' => 'row',
+                    'theme_location' => 'footer'
+                )); ?>
+<!--            </div>-->
         </div>
     </footer>
 

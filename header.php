@@ -17,14 +17,10 @@
 
     <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
@@ -39,6 +35,10 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <?php wp_nav_menu($arg=array(
+                'menu_class' => 'navbar-nav ml-auto',
+                'theme_location' => 'primary'
+            )); ?>
         </div>
     </div>
 </nav>
