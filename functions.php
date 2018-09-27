@@ -41,6 +41,9 @@ function gallery_widget_init() {
     register_sidebar(array(
         'name' => __('Main sidebar', 'gallery'),
         'id' => 'main_sidebar',
-        'description' => __('widgets added here will appear in all pages using two-column template', 'gallery')
+        'description' => __('widgets added here will appear in all pages using two-column template', 'gallery'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">'
     ));
 }
