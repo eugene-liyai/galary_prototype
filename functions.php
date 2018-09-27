@@ -44,6 +44,9 @@ function gallery_widget_init() {
         'description' => __('widgets added here will appear in all pages using two-column template', 'gallery'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">'
+        'before_title' => '<h2 class="widget-title">',
+        'after-title'=> '</h2>'
     ));
 }
+
+add_action('widgets_init', 'gallery_widget_init');
