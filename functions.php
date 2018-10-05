@@ -138,3 +138,9 @@ add_action('init', 'create_post_type');
         ) // field arrays
     );
 
+add_action('admin_menu', 'gallery_add_box');
+
+function gallery_add_box() {
+    
+}
+
