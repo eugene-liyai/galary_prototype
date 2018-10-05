@@ -71,4 +71,14 @@ add_action('init', 'create_post_type');
 
 // define prefix
 
+    $prefix = 'ge_';
+
+    $meta_box = array(
+        'id' => 'gallery-meta-box',
+        'title' => 'Add new gallery listing',
+        'page' => 'gallery_items',
+        'context' => 'normal',
+        'priority' => 'high',
+        'fields' => array()
+    );
 
