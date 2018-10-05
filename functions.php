@@ -141,6 +141,6 @@ add_action('init', 'create_post_type');
 add_action('admin_menu', 'gallery_add_box');
 
 function gallery_add_box() {
-    
+    global $meta_box;
 }
 
