@@ -87,6 +87,13 @@ add_action('init', 'create_post_type');
                 'type' => 'text',
                 'std' => 'Acrylics for Begginers'
             ),
+            array(
+                'name' => 'Instructor',
+                'descr' => 'Person teaching the gallery class',
+                'id' => $prefix. 'instructor',
+                'type' => 'text',
+                'std' => 'Leslie Yepp'
+            )
         ),
     );
 
