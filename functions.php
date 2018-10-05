@@ -1,4 +1,4 @@
-<?php
+ <?php
 /* Function file */
 
     if (!function_exists('gallery_setup')):
@@ -50,3 +50,99 @@ function gallery_widget_init() {
 }
 
 add_action('widgets_init', 'gallery_widget_init');
+
+// Custom gallery post type
+
+function create_post_type() {
+    register_post_type('gallery_items', 
+        array(
+            'labels' => array(
+                'name' => __('Galleries'),
+                'singular_name' => __('Gallery')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'support' => 'title'
+        )
+    );
+}
+
+add_action('init', 'create_post_type');
+
+// define prefix
+
+    $prefix = 'ge_';
+
+    $meta_box = array(
+        'id' => 'gallery-meta-box',
+        'title' => 'Add new gallery listing',
+        'page' => 'gallery_items',
+        'context' => 'normal',
+        'priority' => 'high',
+        'fields' => array(
+            array(
+                'name' => 'Gallery Name',
+                'descr' => 'Enter the name of the gallery you wish to list',
+                'id' => $prefix. 'gallery_name',
+                'type' => 'text',
+                'std' => 'Acrylics for Begginers'
+            ),
+            array(
+                'name' => 'Instructor',
+                'descr' => 'Person teaching the gallery class',
+                'id' => $prefix. 'instructor',
+                'type' => 'text',
+                'std' => 'Leslie Yepp'
+            ),
+            array(
+                'name' => 'Headshot thumbnail url',
+                'descr' => 'Paste URL of the headshot. You can find this in the media library',
+                'id' => $prefix. 'headshot',
+                'type' => 'text',
+                'std' => 'http://url_of_image'
+            ),
+            array(
+                'name' => 'Skill level',
+                'descr' => 'Beginner, Intermediate, or Advanced',
+                'id' => $prefix. 'skill',
+                'type' => 'text',
+                'std' => 'Beginner'
+            ),
+            array(
+                'name' => 'Length',
+                'descr' => 'How long will this gallery class last?',
+                'id' => $prefix. 'length',
+                'type' => 'text',
+                'std' => '6 months'
+            ),
+            array(
+                'name' => 'Gallery description',
+                'descr' => 'Please write a paragraph describing the gallery class',
+                'id' => $prefix. 'description',
+                'type' => 'textarea',
+                'std' => 'Enter description'
+            ),
+            array(
+                'name' => 'Box Theme',
+                'descr' => 'Colors that set theme for gallery box.',
+                'id' => $prefix. 'theme',
+                'class' => $prefix. 'theme',
+                'type' => 'theme_colors',
+                'options' => array(
+                    array('color' => 'Pink'),
+                    array('color' => 'Purple'),
+                    array('color' => 'Teal'),
+                    array('color' => 'Green'),
+                )
+            )
+        ) // field arrays
+    );
+
+add_action('admin_menu', 'gallery_add_box');
+
+function gallery_add_box() {
+    global $meta_box;
+
+    add_meta_box($meta_box['id'], $meta_box['title'], 'gallery_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
+}
+
