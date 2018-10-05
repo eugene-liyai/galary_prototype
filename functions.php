@@ -79,6 +79,14 @@ add_action('init', 'create_post_type');
         'page' => 'gallery_items',
         'context' => 'normal',
         'priority' => 'high',
-        'fields' => array()
+        'fields' => array(
+            array(
+                'name' => 'Gallery Name',
+                'descr' => 'Enter the name of the gallery you wish to list',
+                'id' => $prefix. 'gallery_name',
+                'type' => 'text',
+                'std' => 'Acrylics for Begginers'
+            ),
+        ),
     );
 
