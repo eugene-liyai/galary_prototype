@@ -93,6 +93,13 @@ add_action('init', 'create_post_type');
                 'id' => $prefix. 'instructor',
                 'type' => 'text',
                 'std' => 'Leslie Yepp'
+            ),
+            array(
+                'name' => 'Headshot thumbnail url',
+                'descr' => 'Paste URL of the headshot. You can find this in the media library',
+                'id' => $prefix. 'headshot',
+                'type' => 'text',
+                'std' => 'http://url_of_image'
             )
         ),
     );
