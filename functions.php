@@ -1,4 +1,4 @@
-<?php
+ <?php
 /* Function file */
 
     if (!function_exists('gallery_setup')):
@@ -50,3 +50,6 @@ function gallery_widget_init() {
 }
 
 add_action('widgets_init', 'gallery_widget_init');
+
+// Custom gallery post type
+
