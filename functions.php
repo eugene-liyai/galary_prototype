@@ -100,6 +100,13 @@ add_action('init', 'create_post_type');
                 'id' => $prefix. 'headshot',
                 'type' => 'text',
                 'std' => 'http://url_of_image'
+            ),
+            array(
+                'name' => 'Skill level',
+                'descr' => 'Beginner, Intermediate, or Advanced',
+                'id' => $prefix. 'skill',
+                'type' => 'text',
+                'std' => 'Beginner'
             )
         ),
     );
