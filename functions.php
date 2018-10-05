@@ -142,5 +142,7 @@ add_action('admin_menu', 'gallery_add_box');
 
 function gallery_add_box() {
     global $meta_box;
+
+    add_meta_box($meta_box['id'], $meta_box['title'], 'gallery_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
 }
 
