@@ -53,3 +53,10 @@ add_action('widgets_init', 'gallery_widget_init');
 
 // Custom gallery post type
 
+function create_post_type() {
+    register_post_type('gallery_items', 
+        array(
+            'labels' => array(
+            ),
+        ));
+}
