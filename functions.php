@@ -107,6 +107,20 @@ add_action('init', 'create_post_type');
                 'id' => $prefix. 'skill',
                 'type' => 'text',
                 'std' => 'Beginner'
+            ),
+            array(
+                'name' => 'Length',
+                'descr' => 'How long will this gallery class last?',
+                'id' => $prefix. 'length',
+                'type' => 'text',
+                'std' => '6 months'
+            ),
+            array(
+                'name' => 'Gallery description',
+                'descr' => 'Please write a paragraph describing the gallery class',
+                'id' => $prefix. 'description',
+                'type' => 'textarea',
+                'std' => 'Enter description'
             )
         ),
     );
