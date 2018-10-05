@@ -121,7 +121,20 @@ add_action('init', 'create_post_type');
                 'id' => $prefix. 'description',
                 'type' => 'textarea',
                 'std' => 'Enter description'
+            ),
+            array(
+                'name' => 'Box Theme',
+                'descr' => 'Colors that set theme for gallery box.',
+                'id' => $prefix. 'theme',
+                'class' => $prefix. 'theme',
+                'type' => 'theme_colors',
+                'options' => array(
+                    array('color' => 'Pink'),
+                    array('color' => 'Purple'),
+                    array('color' => 'Teal'),
+                    array('color' => 'Green'),
+                )
             )
-        ),
+        ) // field arrays
     );
 
